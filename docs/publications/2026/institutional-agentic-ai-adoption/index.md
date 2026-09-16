@@ -12,6 +12,7 @@ authors:
 affiliation: Cryptography Research Center, Technology Innovation Institute
 institution: Technology Innovation Institute
 pdf: /publications/2026/institutional-agentic-ai-adoption/InnoviumAI-Institutional-Adoption.pdf
+video: /publications/2026/institutional-agentic-ai-adoption/InnoviumAI_UAE-AI-Award_compressed.mp4
 cover: /assets/institutional-adoption-cover.png
 topics:
   - Agentic AI

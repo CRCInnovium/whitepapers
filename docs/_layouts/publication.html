@@ -21,6 +21,7 @@ layout: default
       <dl class="facts"><dt>Document</dt><dd>{{ page.document_type | escape }}</dd><dt>Research stage</dt><dd>{{ page.research_stage | escape }}</dd><dt>Document date</dt><dd>{{ page.document_date | date: '%-d %B %Y' }}</dd><dt>Institution</dt><dd>{{ page.institution | escape }}</dd>{% if page.version %}<dt>Version</dt><dd>{{ page.version | escape }}</dd>{% endif %}</dl>
       <a class="button" href="{{ page.pdf | relative_url }}">Read the PDF ↗</a>
       <p style="font-size:12px;margin:15px 0 0;color:var(--muted)">Full methodology, supporting evidence and references.</p>
+      {% if page.video %}<div style="margin-top:24px"><a class="textlink" href="{{ page.video | relative_url }}">Watch the presentation ↗</a><p style="font-size:12px;margin:10px 0 0;color:var(--muted)">MP4 · 720p · 4.78 MB</p></div>{% endif %}
     </aside>
   </div>
 </main>
