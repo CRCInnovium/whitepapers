@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<main id="main">
+  <div class="crumb"><a href="{{ '/' | relative_url }}">← All publications</a></div>
+  <section class="detailhero">
+    <div class="meta"><span class="tag">{{ page.document_type | escape }}</span><span>{{ page.document_date | date: '%B %Y' }}</span></div>
+    <h1>{{ page.title | escape }}</h1>
+    {% if page.subtitle %}<p class="sub">{{ page.subtitle | escape }}</p>{% endif %}
+    <p class="authors">{{ page.authors | join: ' · ' | escape }}</p>
+    <p class="affiliation">{{ page.affiliation | escape }}</p>
+  </section>
+  <div class="detailbody">
+    <article class="abstract">
+      {{ content }}
+      {% if page.topics %}<div aria-label="Research topics">{% for topic in page.topics %}<span class="topic">{{ topic | escape }}</span>{% endfor %}</div>{% endif %}
+      {% if page.submission_note %}<section class="note"><h2 style="font-size:15px;margin-bottom:8px">Submission context</h2><p>{{ page.submission_note | escape }}</p></section>{% endif %}
+    </article>
+    <aside class="sidebar" aria-label="Publication document">
+      <div class="eyebrow">Full document</div>
+      <dl class="facts"><dt>Document</dt><dd>{{ page.document_type | escape }}</dd><dt>Research stage</dt><dd>{{ page.research_stage | escape }}</dd><dt>Document date</dt><dd>{{ page.document_date | date: '%-d %B %Y' }}</dd><dt>Institution</dt><dd>{{ page.institution | escape }}</dd>{% if page.version %}<dt>Version</dt><dd>{{ page.version | escape }}</dd>{% endif %}</dl>
+      <a class="button" href="{{ page.pdf | relative_url }}">Read the PDF ↗</a>
+      <p style="font-size:12px;margin:15px 0 0;color:var(--muted)">Full methodology, supporting evidence and references.</p>
+    </aside>
+  </div>
+</main>

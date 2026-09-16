@@ -1,0 +1,7 @@
+title: InnoviumAI Research Publications
+description: Studies, technical reports and whitepapers from InnoviumAI.
+url: https://crcinnovium.github.io
+baseurl: /whitepapers
+markdown: kramdown
+exclude:
+  - README.md
